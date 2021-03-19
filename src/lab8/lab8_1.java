@@ -5,6 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class lab8_1 extends JFrame implements ActionListener {
+    JLabel textLabel;
     JTextField textField;
     JButton saveBtn, clearBtn, showBtn;
     Container container;
@@ -33,7 +34,7 @@ public class lab8_1 extends JFrame implements ActionListener {
         showBtn.setFont(new Font("Courier New", Font.BOLD, 20));
         showBtn.addActionListener(this);
         container.add(showBtn);
-        setSize(340, 120);
+        setSize(370, 120);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }

@@ -8,7 +8,7 @@ public class lab8_3 extends JFrame implements ActionListener {
     JLabel textLabel;
     JTextField textField;
     JButton saveBtn, clearBtn, showBtn;
-    JButton addBtn, subBtn, mulBtn, divBtn;
+    JButton addBtn, subBtn, mulBtn, divBtn, perBtn, rootBtn, posBtn;
     Container container;
     NumberNew obj;
 
@@ -50,7 +50,23 @@ public class lab8_3 extends JFrame implements ActionListener {
         divBtn.setFont(new Font("Courier New", Font.BOLD, 20));
         divBtn.addActionListener(this);
         container.add(divBtn);
-        setSize(370, 160);
+/* ******************************************************************** */
+        perBtn = new JButton(" % ");
+        perBtn.setFont(new Font("Courier New", Font.BOLD, 20));
+        perBtn.addActionListener(this);
+        container.add(perBtn);
+
+        rootBtn = new JButton("squ");
+        rootBtn.setFont(new Font("Courier New", Font.BOLD, 20));
+        rootBtn.addActionListener(this);
+        container.add(rootBtn);
+
+        posBtn = new JButton("+/-");
+        posBtn.setFont(new Font("Courier New", Font.BOLD, 20));
+        posBtn.addActionListener(this);
+        container.add(posBtn);
+
+        setSize(370, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
@@ -64,7 +80,7 @@ public class lab8_3 extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == saveBtn) {
-            int value = Integer.parseInt(textField.getText());
+            double value = Double.parseDouble(textField.getText());
             obj.setValue(value);
             textField.setText("");
         } else if (event.getSource() == clearBtn) {
@@ -73,20 +89,32 @@ public class lab8_3 extends JFrame implements ActionListener {
         } else if (event.getSource() == showBtn) {
             textField.setText(obj.toString());
         } else if (event.getSource() == addBtn) {
-            int value = Integer.parseInt(textField.getText());
+            double value = Double.parseDouble(textField.getText());
             obj.add(value);
             textField.setText(obj.toString());
         } else if (event.getSource() == subBtn) {
-            int value = Integer.parseInt(textField.getText());
+            double value = Double.parseDouble(textField.getText());
             obj.subtract(value);
             textField.setText(obj.toString());
         } else if (event.getSource() == mulBtn) {
-            int value = Integer.parseInt(textField.getText());
+            double value = Double.parseDouble(textField.getText());
             obj.multiply(value);
             textField.setText(obj.toString());
         } else if (event.getSource() == divBtn) {
-            int value = Integer.parseInt(textField.getText());
+            double value = Double.parseDouble(textField.getText());
             obj.divide(value);
+            textField.setText(obj.toString());
+        } else if(event.getSource() == perBtn){
+            double value = Double.parseDouble(textField.getText());
+            obj.percent(value);
+            textField.setText(obj.toString());
+        } else if(event.getSource() == rootBtn){
+            double value = Double.parseDouble(textField.getText());
+            obj.squareroot(value);
+            textField.setText(obj.toString());
+        } else if(event.getSource() == posBtn){
+            double value = Double.parseDouble(textField.getText());
+            obj.positive(value);
             textField.setText(obj.toString());
         }
     }

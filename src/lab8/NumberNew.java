@@ -1,41 +1,57 @@
 package lab8;
 
+import java.text.DecimalFormat;
+
 public class NumberNew {
-    private int number;
+    private double number;
+    DecimalFormat df = new DecimalFormat("0.00");
 
     public NumberNew() {
-        setValue((int) (Math.random() * 100));
+        setValue((double) (Math.random() * 100));
     }
 
-    public NumberNew(int n) {
+    public NumberNew(double n) {
         setValue(n);
     }
 
-    public void setValue(int n) {
+    public void setValue(double n) {
         number = n;
     }
 
-    public int getValue() {
+    public double getValue() {
         return (number);
     }
 
     public String toString() {
-        return (Integer.toString(getValue()));
+        //return (double.toString(getValue()));
+        return df.format(getValue());
     }
 
-    public void add(int n) {
+    public void add(double n) {
         setValue(getValue() + n);
     }
 
-    public void subtract(int n) {
+    public void subtract(double n) {
         setValue(getValue() - n);
     }
 
-    public void multiply(int n) {
+    public void multiply(double n) {
         setValue(getValue() * n);
     }
 
-    public void divide(int n) {
+    public void divide(double n) {
         setValue(getValue() / n);
+    }
+
+    public void percent(double n) {
+        setValue(getValue() * n / 100);
+    }
+
+    public void squareroot(double n) {
+        setValue(Math.sqrt(n));
+    }
+
+    public void positive(double n) {
+        setValue(n-n-n);
     }
 }

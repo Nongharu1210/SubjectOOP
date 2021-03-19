@@ -33,6 +33,7 @@ public class lab8_2 extends JFrame implements ActionListener {
         showBtn.setFont(new Font("Courier New", Font.BOLD, 20));
         showBtn.addActionListener(this);
         container.add(showBtn);
+
         setSize(370, 120);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,9 +49,15 @@ public class lab8_2 extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == saveBtn) {
-            int value = Integer.parseInt(textField.getText());
-            obj.setValue(value);
-            textField.setText("");
+            //test
+            if (textField.getText().isEmpty()) {
+                //obj.setValue(0);
+            } else {
+                int value = Integer.parseInt(textField.getText());
+                obj.setValue(value);
+                textField.setText("");
+            }
+            /* ************************* */
         } else if (event.getSource() == clearBtn) {
             obj.setValue(0);
             textField.setText("");

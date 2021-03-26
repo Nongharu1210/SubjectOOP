@@ -53,8 +53,8 @@ public final class lab9_1 extends JFrame implements ActionListener {
     }
 
     public void initSubject() {
-        sub = new Subject[9];
-        subjectStr = new String[9];
+        sub = new Subject[10];
+        subjectStr = new String[10];
         sub[0] = new Subject("060223115", "SYSTEM ANALYSIS AND DESIGN", 3);
         sub[1] = new Subject("060223116", "OBJECT-ORIENTED PROGRAMMING", 3);
         sub[2] = new Subject("060223117", "OBJECT-ORIENTED PROGRAMMING", 1);
@@ -64,6 +64,7 @@ public final class lab9_1 extends JFrame implements ActionListener {
         sub[6] = new Subject("060223124", "DATA COMMUNICATION AND COMPU", 3);
         sub[7] = new Subject("080103062", "PRACTICAL ENGLISH II", 3);
         sub[8] = new Subject("091521545", "testcom", 3);
+        sub[9] = new Subject("084554847", "Javagg", 3);
         subjectStr[0] = sub[0].toString();
         subjectStr[1] = sub[1].toString();
         subjectStr[2] = sub[2].toString();
@@ -73,6 +74,7 @@ public final class lab9_1 extends JFrame implements ActionListener {
         subjectStr[6] = sub[6].toString();
         subjectStr[7] = sub[7].toString();
         subjectStr[8] = sub[8].toString();
+        subjectStr[9] = sub[9].toString();
     }
 
     public void initGui() {
@@ -92,7 +94,7 @@ public final class lab9_1 extends JFrame implements ActionListener {
         subLabel = new JLabel("Select Subject : ");
         container.add(subLabel);
         subCombo = new JComboBox<String>(subjectStr);
-        subCombo.setMaximumRowCount(9);
+        subCombo.setMaximumRowCount(10);
         container.add(subCombo);
         addsubBtn = new JButton("Add Subject");
         addsubBtn.setEnabled(false);

@@ -94,8 +94,14 @@ public class lab9_2 extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(this, "Edit Subject already", "Message", JOptionPane.INFORMATION_MESSAGE);
                 clearTextField();
             } else {
-                JOptionPane.showMessageDialog(this, "can not found subject code", "Error Message",
-                        JOptionPane.ERROR_MESSAGE);
+                int pos = CheckArrayEmpty();
+                int i = Integer.parseInt(creditText.getText());
+                sub[pos] = new SubjectNew(codeText.getText(), nameText.getText(), i);
+                subTextArea.setText(readString(sub));
+                JOptionPane.showMessageDialog(this, "Add Subject already", "Message", JOptionPane.INFORMATION_MESSAGE);
+                clearTextField();
+                // JOptionPane.showMessageDialog(this, "can not found subject code", "Error Message",
+                //         JOptionPane.ERROR_MESSAGE);
             }
         } else if (event.getSource() == deleteBtn) {
             String s = codeText.getText();

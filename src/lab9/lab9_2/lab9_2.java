@@ -66,7 +66,7 @@ public class lab9_2 extends JFrame implements ActionListener {
         statusText = new JTextField(30);
         statusText.setEnabled(false);
         container.add(statusText);
-        setSize(500, 200);
+        setSize(450, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }

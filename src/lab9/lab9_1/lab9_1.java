@@ -156,7 +156,7 @@ public final class lab9_1 extends JFrame implements ActionListener {
             subTextArea.setText("");
             count = 0;
             resetBtn();
-        }
+        } 
     }
 
     public void resetBtn() {

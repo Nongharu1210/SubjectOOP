@@ -73,17 +73,23 @@ public class lab9_2 extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == addBtn) {
+            String s = codeText.getText();
+            int b = searchSubject(sub, s);
             if (SubjectNew.getCount() == sub.length) {
                 JOptionPane.showMessageDialog(this, "Array full , can not add", "Message",
                         JOptionPane.INFORMATION_MESSAGE);
                 return;
             }
-            int pos = CheckArrayEmpty();
-            int n = Integer.parseInt(creditText.getText());
-            sub[pos] = new SubjectNew(codeText.getText(), nameText.getText(), n);
-            subTextArea.setText(readString(sub));
-            JOptionPane.showMessageDialog(this, "Add Subject already", "Message", JOptionPane.INFORMATION_MESSAGE);
-            clearTextField();
+            if(b>=0){
+                JOptionPane.showMessageDialog(this, "Replace subcode", "Message", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                int pos = CheckArrayEmpty();
+                int n = Integer.parseInt(creditText.getText());
+                sub[pos] = new SubjectNew(codeText.getText(), nameText.getText(), n);
+                subTextArea.setText(readString(sub));
+                JOptionPane.showMessageDialog(this, "Add Subject already", "Message", JOptionPane.INFORMATION_MESSAGE);
+                clearTextField();
+            }
         } else if (event.getSource() == editBtn) {
             String s = codeText.getText();
             int n = searchSubject(sub, s);

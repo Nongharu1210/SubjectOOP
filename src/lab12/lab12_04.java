@@ -17,18 +17,23 @@ public class lab12_04 extends JFrame implements ActionListener, MouseListener, M
         redBtn = new JButton("Red");
         redBtn.addActionListener(this);
         c.add(redBtn);
+
         greenBtn = new JButton("Green");
         greenBtn.addActionListener(this);
         c.add(greenBtn);
+
         blueBtn = new JButton("Blue");
         blueBtn.addActionListener(this);
         c.add(blueBtn);
+
         clearBtn = new JButton("Clear");
         clearBtn.addActionListener(this);
         c.add(clearBtn);
+
         showStatus = new JTextField(30);
         showStatus.setEditable(false);
         c.add(showStatus);
+        
         // g = getGraphics();
         color = Color.BLACK;
         addMouseListener(this);

@@ -89,7 +89,7 @@ public class lab12_05 extends JFrame implements KeyListener, ActionListener {
 
     public static void main(String[] args) {
         lab12_05 window = new lab12_05();
-        window.setSize(320, 240);
+        window.setSize(485, 325);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
     }

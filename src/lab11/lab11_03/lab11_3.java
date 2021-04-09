@@ -1,4 +1,4 @@
-package lab11;
+package lab11.lab11_03;
 
 import java.awt.*;
 import java.awt.event.*;

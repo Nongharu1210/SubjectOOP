@@ -14,7 +14,7 @@ public class lab12_01 extends JFrame implements MouseListener {
         x = 140;
         y = 100;
         size = 50;
-        fgcolor = Color.BLUE;
+        fgcolor = Color.BLUE;  
         addMouseListener(this);
     }
 

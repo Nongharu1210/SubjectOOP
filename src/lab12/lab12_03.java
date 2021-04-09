@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class lab12_03 extends JFrame implements ActionListener, MouseListener {
     int x1, y1, x2, y2;
-    JButton btnLine, btnRect, btnCircle, btnClear;
+    JButton btnLine, btnRect, btnCircle, btnClear, redBtn, greenBtn, blueBtn;
     JTextField text1, text2;
     Color oldColor1, oldColor2;
     char typeShape = 'L';
@@ -27,6 +27,19 @@ public class lab12_03 extends JFrame implements ActionListener, MouseListener {
         btnClear = new JButton("Clear");
         btnClear.addActionListener(this);
         c.add(btnClear);
+        //************************************//
+        redBtn = new JButton("Red");
+        redBtn.addActionListener(this);
+        c.add(redBtn);
+
+        greenBtn = new JButton("Green");
+        greenBtn.addActionListener(this);
+        c.add(greenBtn);
+
+        blueBtn = new JButton("Blue");
+        blueBtn.addActionListener(this);
+        c.add(blueBtn);
+        //************************************//
         text1 = new JTextField(12);
         text1.setEditable(false);
         c.add(text1);

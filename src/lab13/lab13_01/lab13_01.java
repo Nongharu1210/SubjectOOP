@@ -41,9 +41,9 @@ public class lab13_01 extends JFrame implements ActionListener {
     }
 
     public void loadImage() {
-        image1 = new Picture("d:/logo.gif");
-        image2 = new Picture("d:/car1.jpg");
-        image3 = new Picture("d:/beach.jpg");
+        image1 = new Picture("d:/SubjectOOP/lib/image/logo.gif");
+        image2 = new Picture("d:/SubjectOOP/lib/image/car1.jpg");
+        image3 = new Picture("d:/SubjectOOP/lib/image/beach.jpg");
     }
 
     public void paint(Graphics g) {

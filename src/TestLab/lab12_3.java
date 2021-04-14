@@ -1,15 +1,17 @@
+
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class lab12_03 extends JFrame implements ActionListener, MouseListener {
-    int x1, y1, x2, y2, color = 1;
+public class lab12_3 extends JFrame implements ActionListener,MouseListener {
+    int x1, y1, x2,y2;
     JButton btnLine, btnRect, btnCircle, btnClear;
     JTextField text1, text2;
     Color oldColor1, oldColor2;
     char typeShape = 'L';
-
-    public lab12_03() {
+    int color = 1;
+    public lab12_3() {
         super("");
         Container c = getContentPane();
         c.setLayout( new FlowLayout());
@@ -25,130 +27,77 @@ public class lab12_03 extends JFrame implements ActionListener, MouseListener {
         btnClear = new JButton("Clear");
         btnClear.addActionListener( this );
         //c.add(btnClear);
-
-        c.add(new JLabel("                                                           "));
-        c.add(new JLabel("                                                           "));
-        c.add(new JLabel("                                                           "));
-        c.add(new JLabel("                                                           "));
-        c.add(new JLabel("                                                           "));
-        c.add(new JLabel("                                                           "));
-        c.add(new JLabel("     "));
-
-        
-        
-        
-
+        c.add(new JLabel("                                                     "));
+        c.add(new JLabel("                                                     "));
+        c.add(new JLabel("                                                     "));
+        c.add(new JLabel("                                                     "));
+        c.add(new JLabel("                                                     "));
+        c.add(new JLabel("                                                     "));
+    
         text1 = new JTextField(12);
-        text1.setEditable(false);
-        c.add(text1);
+        text1.setEditable( false );
+        c.add( text1 );
         text2 = new JTextField(12);
-        text2.setEditable(false);
-        c.add(text2);
+        text2.setEditable( false );
+        c.add( text2 );
         addMouseListener(this);
-        
     }
-
+    
     public void paint(Graphics g) {
         super.paint(g);
-
         //buttons
         g.setColor(Color.YELLOW);
-        g.fillRect(105, 35, 55, 25);
+        g.fillRect(45, 35, 55, 25);
+        g.fillRect(105, 35, 90, 25);
+        g.fillRect(200, 35, 70, 25);
+        g.fillRect(275, 35, 65, 25);
         g.setColor(Color.RED);
-        g.drawRect(105, 35, 55, 25);
-        g.drawString("LINE",120, 53);
-        
-        
-        g.setColor(Color.YELLOW);
-        g.fillRect(165, 35, 90, 25);
-        g.setColor(Color.RED);
-        g.drawRect(165, 35, 90, 25);
-        g.drawString("RECT",195, 53);
-        
-        
-        g.setColor(Color.YELLOW);
-        g.fillRect(260, 35, 70, 25);
-        g.setColor(Color.RED);
-        g.drawRect(260, 35, 70, 25);
-        g.drawString("CIRCLE",275, 53);
-        
-        
-        g.setColor(Color.YELLOW);
-        g.fillRect(335, 35, 65, 25);
-        g.setColor(Color.RED);
-        g.drawRect(335, 35, 65, 25);
-        g.drawString("CLEAR", 350, 53);
-
-
+        g.drawRect(45, 35, 55, 25);
+        g.drawRect(105, 35, 90, 25);
+        g.drawRect(200, 35, 70, 25);
+        g.drawRect(275, 35, 65, 25);
+        g.drawString("LINE",57, 53);
+        g.drawString("RECT",132, 53);
+        g.drawString("CIRCLE",212, 53);
+        g.drawString("CLEAR",287, 53);
         //color
         g.setColor(Color.BLACK);
-        g.fillRect(70, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(70, 70, 25, 25);
-       
+        g.fillRect(10, 70, 25, 25);
         g.setColor(Color.BLUE);
-        g.fillRect(100, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(100, 70, 25, 25);
-        
-
+        g.fillRect(40, 70, 25, 25);
         g.setColor(Color.CYAN);
-        g.fillRect(130, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(130, 70, 25, 25);
-        
-
+        g.fillRect(70, 70, 25, 25);
         g.setColor(Color.DARK_GRAY);
-        g.fillRect(160, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(160, 70, 25, 25);
-        
-
+        g.fillRect(100, 70, 25, 25);
         g.setColor(Color.GRAY);
-        g.fillRect(190, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(190, 70, 25, 25);
-        
-
+        g.fillRect(130, 70, 25, 25);
         g.setColor(Color.GREEN);
-        g.fillRect(220, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(220, 70, 25, 25);
-        
-
+        g.fillRect(160, 70, 25, 25);
         g.setColor(Color.LIGHT_GRAY);
-        g.fillRect(250, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(250, 70, 25, 25);
-        
-
+        g.fillRect(190, 70, 25, 25);
         g.setColor(Color.MAGENTA);
-        g.fillRect(280, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(280, 70, 25, 25);
-        
-
+        g.fillRect(220, 70, 25, 25);
         g.setColor(Color.ORANGE);
-        g.fillRect(310, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(310, 70, 25, 25);
-        
-
+        g.fillRect(250, 70, 25, 25);
         g.setColor(Color.PINK);
+        g.fillRect(280, 70, 25, 25);
+        g.setColor(Color.RED);
+        g.fillRect(310, 70, 25, 25);
+        g.setColor(Color.WHITE);
         g.fillRect(340, 70, 25, 25);
         g.setColor(Color.BLACK);
+        g.drawRect(10, 70, 25, 25);
+        g.drawRect(40, 70, 25, 25);
+        g.drawRect(70, 70, 25, 25);
+        g.drawRect(100, 70, 25, 25);
+        g.drawRect(130, 70, 25, 25);
+        g.drawRect(160, 70, 25, 25);
+        g.drawRect(190, 70, 25, 25);
+        g.drawRect(220, 70, 25, 25);
+        g.drawRect(250, 70, 25, 25);
+        g.drawRect(280, 70, 25, 25);
+        g.drawRect(310, 70, 25, 25);
         g.drawRect(340, 70, 25, 25);
-        
-
-        g.setColor(Color.RED);
-        g.fillRect(370, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(370, 70, 25, 25);
-
-        g.setColor(Color.WHITE);
-        g.fillRect(400, 70, 25, 25);
-        g.setColor(Color.BLACK);
-        g.drawRect(400, 70, 25, 25);
 
         switch (color){
             case 1 :
@@ -201,24 +150,22 @@ public class lab12_03 extends JFrame implements ActionListener, MouseListener {
             g.drawOval(x1, y1, x2-x1, y2-y1);
             break;
         }
-
     }
-
+    
     public void mousePressed(MouseEvent event) {
         if (event.getButton() == 1) { // Mouse Left
             x1 = event.getX();
             y1 = event.getY();
-            text1.setText("(X1 = " + x1 + ",Y1 = " + y1 + ")");
-        } else if (event.getButton() == 3) { // Mouse Right
+            text1.setText("(X1 = "+x1+",Y1 = "+y1+")" );
+        }
+        else if (event.getButton() == 3) { // Mouse Right
             x2 = event.getX();
             y2 = event.getY();
-            text2.setText(" (X2 = " + x2 + ",Y2 = " + y2 + ")");
+            text2.setText(" (X2 = "+x2+",Y2 = "+y2+")" );
         }
     }
 
-    public void mouseReleased(MouseEvent event) {
-    }
-
+    public void mouseReleased(MouseEvent event) { }
     public void mouseClicked(MouseEvent event) {
         x1 = event.getX();
         y1 = event.getY();
@@ -263,39 +210,33 @@ public class lab12_03 extends JFrame implements ActionListener, MouseListener {
         if (red) color = 11;
         if (white) color = 12;
 
+        
         repaint();
     }
-
-    public void mouseEntered(MouseEvent event) {
+    public void mouseEntered( MouseEvent event ) {
         repaint();
     }
-
     public void mouseExited(MouseEvent event) {
         repaint();
     }
-
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btnLine)
-            typeShape = 'L';
-        else if (e.getSource() == btnRect)
-            typeShape = 'R';
-        else if (e.getSource() == btnCircle)
-            typeShape = 'C';
+        if (e.getSource() == btnLine) typeShape = 'L';
+        else if (e.getSource() == btnRect) typeShape = 'R';
+        else if (e.getSource() == btnCircle) typeShape = 'C';
         else if (e.getSource() == btnClear) {
             x1 = y1 = x2 = y2 = 0;
             text1.setText("");
             text2.setText("");
-        } 
-
+        }   
         repaint();
     }
-
     public static void main(String[] args) {
-        lab12_03 window = new lab12_03();
-        window.setSize(550, 400);
+        lab12_3 window = new lab12_3();
+        window.setSize(380, 300);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
     }
+
     boolean isInside(int x,int y,int width,int height, int x1, int y1) {
         int x2 = x + width;
         int y2 = y + height;

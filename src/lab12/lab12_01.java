@@ -1,4 +1,3 @@
-package lab12;
 
 import java.awt.*;
 import java.awt.event.*;
